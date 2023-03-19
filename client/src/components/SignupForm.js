@@ -47,6 +47,7 @@ const SignupForm = () => {
     } catch (err) {
       console.error(err);
       setShowAlert(true);
+      console.log(JSON.stringify(err, null, 2));
     }
 
     setUserFormData({

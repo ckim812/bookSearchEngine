@@ -99,7 +99,7 @@ const SearchBooks = () => {
 
   return (
     <>
-      <Container fluid className="text-light bg-dark">
+      <Jumbotron fluid className="text-light bg-dark">
         <Container>
           <h1>Search for Books!</h1>
           <Form onSubmit={handleFormSubmit}>
@@ -122,7 +122,7 @@ const SearchBooks = () => {
             </Form.Row>
           </Form>
         </Container>
-      </Container>
+      </Jumbotron>
 
       <Container>
         <h2>
@@ -130,7 +130,7 @@ const SearchBooks = () => {
             ? `Viewing ${searchedBooks.length} results:`
             : "Search for a book to begin"}
         </h2>
-        <Container>
+        <CardColumns>
           {searchedBooks.map((book) => {
             return (
               <Card key={book.bookId} border="dark">
@@ -164,7 +164,7 @@ const SearchBooks = () => {
               </Card>
             );
           })}
-        </Container>
+        </CardColumns>
       </Container>
     </>
   );
